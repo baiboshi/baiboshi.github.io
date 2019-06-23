@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+  {% for post_tag in post.tags %}
+    {% assign tag = site.data.tags[post_tag] %}
+    {% if tag %}
+      {% capture tags_content_temp %}{{tags_content}}<a href="{{site.baseurl}}/{{post_tag}}/">{{tag.name}}</a>{% if forloop.last == false %}<span>和</span>{% endif %}{% endcapture %}
+      {% assign tags_content = tags_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign tags_content = '' %}
+{% endif %}
+
+<article class="post">
+  <h1 class="post-title">{{page.title}}</h1>
+  <div class="post-date">
+    <span><span class="icon icon-calendar"></span> 发表于 <time datetime="{{page.date | date_to_xmlschema}}">{{page.date | date: '%Y年%m月%d日'}}</time> &middot;</span>
+    {% if tags_content != '' %}归类于{{tags_content}} &middot;{% endif %}
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">
+      总访问量:<span id="busuanzi_value_site_pv"></span>
+  </span>&middot;
+  <span id="busuanzi_container_page_pv">
+      本文总阅读量:<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  <hr class="post-divide">
+  {{content}}
+</article>
+
+{% if site.author.about %}
+
+<aside class="author">
+  <h2 class="aside-title">关于作者</h2>
+
+  {% if site.author.photo %}
+  <audio src="{{site.baseurl}}/public/audio/wo.MP3" id="wo"></audio>
+  <img class="wo" src="{{site.author.photo}}" alt="{{site.author.name}}" onclick="document.getElementById('wo').play()"/>
+  {% endif %}
+
+  {{site.author.about | markdownify}}
+</aside>
+{% endif %}
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
+var gitalk = new Gitalk({ 
+  id: '43864639',
+  owner: 'baiyunlei', 
+  repo: 'baiyunlei.github.io',
+  admin: ['baiyunlei'],
+  oauth: {
+  client_id: 'b49d51d06388da8e0586',
+  client_secret: '7739c1cda79f77c0ae44e041c1d675261868fceb', 
+  }
+});
+gitalk.render('gitalk-container');
+</Script>
+
+
+
+
+
+    
+
+
+
+
+
+  
+     
+

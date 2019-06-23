@@ -1,0 +1,148 @@
+* {
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+::selection {
+    background: green;
+    color: #fff;
+    text-shadow: none;
+}
+/*音乐显示名称颜色*/
+.content a, .related-posts li a:hover {
+    color: #03f4bc;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #999;
+    font-family: 'Microsoft Yahei','微软雅黑',arial;
+}
+header h1 {
+    display: inline-block;
+}
+header h1 a {
+    color: #bbb;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+a:hover {
+    color: #eee;
+    text-decoration: underline;
+}
+body {
+        background-image: url("/public/images/backgrnd.jpg"), url("/yingyue/images/chaodi.jpg");
+        background-color: #cccccc;
+        width: 100%;
+}
+
+.colorBg {
+    background-image: none;
+}
+.wrapper {
+    text-align: center;
+    margin: 0 auto;
+    
+    width: 100%;
+}
+#player {
+    position: fixed;
+    bottom: 5px;
+    opacity: 0.1;
+    left: 370px;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+}
+#player:hover {
+    opacity: 1;
+}
+/* 设置歌名音乐框 */
+#playlist {
+    text-align: left;
+    max-width: 290px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+.info a {
+    color: #8A2BE2;
+    text-decoration: underline; 
+}
+/* 设置音乐边框条 */
+.bg {
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* 设置连接图标高度 */
+#playlist ol {
+    height: 735px;
+    overflow: auto;
+    margin: 0;
+
+}
+/* 设置底部边框高低 */
+#lyricWrapper {
+    height: 569px; 
+    overflow: hidden;
+    position: relative;
+    margin-top: 0;
+    left: 26px;
+    width: 95%;
+    color: #fff;
+}
+
+/* http://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text */
+#lyricContainer {
+    position: relative;
+    top: 130px;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    left: 135px;
+}
+
+/*the highlight color of the current lyric line*/
+.current-line-0 {
+    color: #FAFA17;
+}
+.current-line-1 {
+    color: #ff1493;
+}
+.current-line-2 {
+    color: #adff2f;
+}
+.current-line-3 {
+    color: #c617e8;
+}
+.current-song, .current-song a {
+    color: #A6E22D;
+}
+/*hide the default audio controls when overflow, the 526px is the width of the controls in IE*/
+@media screen and (max-width: 526px) {
+    #player {
+        display: none;
+   }
+}
+
+/*custom scrollbar for webkit browsers*/
+#playlist ol::-webkit-scrollbar-track {
+	border-radius: 15px;
+	background-color: #F5F5F5;
+}
+#playlist ol::-webkit-scrollbar
+{
+	width: 5px;
+    border-radius: 15px;
+	background-color: #F5F5F5;
+}
+
+#playlist ol::-webkit-scrollbar-thumb {
+	border-radius: 15px;
+	background-color: #BCBCBC;
+}

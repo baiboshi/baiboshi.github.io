@@ -1,0 +1,253 @@
+---
+layout: default
+permalink: /sheying/zhaopian/gangao.html
+image: /public/images/sheying.jpg
+---
+<style>
+  .container { width: initial; }
+  .content { max-width: initial; }
+  .grid::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .grid-item {
+    float: left;
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  .grid-size {
+    width: 250px;
+  }
+  @media (max-width: 48em) {
+    .grid-item,
+    .grid-size {
+      width: calc(50% - 10px);
+    }
+  }
+  .grid-item a {
+    display: block;
+    width: 100%;
+  }
+  .grid-item img {
+    margin: 0;
+    transition: .3s ease;
+  }
+  .grid-item a:hover {
+    border-bottom: none;
+  }
+  /* view.js */
+  .viewer li {
+    -webkit-transition: width 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    -moz-transition: width 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    transition: width 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
+  }
+  .viewer .caption {
+    visibility: hidden;
+    opacity: 0;
+    line-height: 50px;
+    font-size: 0.8rem;
+    -webkit-transition: opacity 1.5s ease-in-out;
+    -moz-transition: opacity 1.5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
+  }
+  .viewer .current .caption {
+    opacity: 100;
+    visibility: visible;
+  }
+  .viewer li > div {
+    top:20px;
+    bottom:20px;
+    left:0;
+    right:0;
+  }
+  .viewer li.has-caption > div {
+    bottom:50px;
+  }
+  .viewer span > img {
+    display: inline;
+  }
+
+</style>
+<head>  
+<link href="/sheying/css/picture.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/sheying/js/jquery.js"></script>
+<body style="background: url(/sheying/images/backgrnd.jpg) silver;"></body>
+
+<div class="indexBody">
+  <div class="btn-float"><a class="maxBtn-l" href="javascript:void(0);"></a><a class="maxBtn-r" href="javascript:void(0);"></a></div>
+  <div class="indexbody-main">
+    <div class="indexbody-left"></div>
+    <div class="indexbody-right"></div>
+  </div>
+  <div class="demo w990">
+    <div class="maxPic-box">
+      <div class="maxPic">
+        <div class="maxPicBox"><span></span><img id="mainPic" src="/sheying/images/gangao/bigPic/1.jpg"/></div>
+      </div>
+    </div>
+        <span class="pic-r-span r">
+            <a href="javascript:void(0);"  class="icon-next2" id="stop-on">已暂停</a>
+            <a id="showOriginal" target="_blank" href="/sheying/images/gangao/bigPic/1.jpg" class="icon-search"><i></i>查看原图</a>
+            <a href="http://www.sucaijiayuan.com" class="icon-arrow-down"><i></i>下载</a>
+            <a href="" class="icon-share2"><i></i>分享</a>
+            <a href="/sheying/sheying.html" class="icon-undo2"><i></i>返回图集</a>
+        </span>   
+        <div id="tplist" class="w-width clearfix">
+          <div class="Up-tuzu">
+              <a class="outpic" href="" id="prevUrl"><span></span><img src="../images/danchenqingyun.gif" /></a>
+              <a class="inpic" href="">云磊藏书阁</a><span class="prevspan"></span>-->
+          </div>
+          
+          <div class="bottom-lists l">
+            <div class="PicBtn-a PicBtn-a-l"><a class="PicBtn-left" href="javascript:void(0);"></a></div>
+            <div class="minPic l">
+              <ul class="gallery_demo_unstyled">
+                <li id="tu_1"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/1.jpg" which="67" height="50" /></a></li>
+                <li id="tu_2"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/2.jpg" which="67" height="50" /></a></li>
+                <li id="tu_3"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/3.jpg" which="67" height="50" /></a></li>
+                <li id="tu_4"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/4.jpg" which="67" height="50" /></a></li>
+                <li id="tu_5"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/5.jpg" which="67" height="50" /></a></li>
+                <li id="tu_6"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/6.jpg" which="67" height="50" /></a></li>
+                <li id="tu_7"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/7.jpg" which="67" height="50" /></a></li>
+                <li id="tu_8"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/8.jpg" which="67" height="50" /></a></li>
+                <li id="tu_9"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/9.jpg" which="67" height="50" /></a></li>
+                <li id="tu_10"><span></span><a href="javascript:void(0);"><img src="/sheying/images/gangao/bigPic/10.jpg" which="67" height="50" /></a></li>
+              </ul>
+            </div>
+            <div class="PicBtn-a PicBtn-a-r"><a class="PicBtn-right" href="javascript:void(0);"></a></div>
+          </div>
+          
+          <div class="Next-tuzu">
+              <a class="outpic" href="" id="nextUrl"><span></span><img src="../images/danchenqingyun.gif"></a>
+              <a class="inpic" href="">云磊藏书阁</a>
+              <span class="nextspan"></span>-->
+           </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="bfooteroDiv w990">
+            <div class="bfooteroDiv-img">
+              <ul>
+                <li>
+                  <div class="bf-oDiv">
+                    <a target="_blank" href="../zhaopian/beijing.html"><img alt="北京" src="../images/beijing/beijing.jpg" /></a><span></span><a href="/" class="bf-alink">北京</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="bf-oDiv">
+                    <a target="_blank" href="../zhaopian/shanghai.html"><img alt="上海" src="../images/shanghai/shanghai.jpg" /></a><span></span><a href="/" class="bf-alink">上海</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="bf-oDiv">
+                    <a target="_blank" href="../zhaopian/aerjiliya.html"><img alt="阿尔及利亚" src="../images/aerjiliya/aerjiliya.jpg" /></a><span></span><a href="/" class="bf-alink" style="left: 30px">阿尔及利亚</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="bf-oDiv">
+                    <a target="_blank" href="../zhaopian/gangao.html"><img alt="港澳" src="../images/gangao/gangao.jpg" /></a><span></span><a href="/" class="bf-alink">港澳</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="bf-oDiv">
+                    <a target="_blank" href="../zhaopian/neimenggu.html"><img alt="内蒙" src="../images/neimenggu/neimenggu.jpg" /></a><span></span><a href="/" class="bf-alink">内蒙</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script type="text/javascript">
+    $(function(){
+      var prevDiv = $(".Up-tuzu");
+      var nextDiv = $(".Next-tuzu");
+      console.log(prevDiv);
+      console.log(prevDiv.find("a"));
+      if(prevDiv.find("a").length<1){
+         prevDiv.html("<p style='line-height:120px;color:#666;'><a href='' id='prevUrl'>云磊藏书阁</a></p>");
+        }
+      if(nextDiv.find("a").length<1){
+       nextDiv.html("<p style='line-height:120px;color:#666;'><a href='' id='nextUrl'>云磊藏书阁</a></p>");
+      }
+    });
+    
+    var selectKey = "1";
+    var picList = [{
+        "picPos": 1,
+        "pid": "1540637",
+        "bigPic": "/sheying/images/gangao/bigPic/1.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/1.jpg",
+        "bigPic": "/sheying/images/gangao/humbPic/1.jpg"
+    },
+    {
+        "picPos": 2,
+        "pid": "1520876",
+        "bigPic": "/sheying/images/gangao/bigPic/2.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/2.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/2.jpg"
+    },
+    {
+        "picPos": 3,
+        "pid": "1520550",
+        "bigPic": "/sheying/images/gangao/bigPic/3.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/3.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/3.jpg"
+    },
+    {
+        "picPos": 4,
+        "pid": "1520549",
+        "bigPic": "/sheying/images/gangao/bigPic/4.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/4.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/4.jpg"
+    },
+    {
+        "picPos": 5,
+        "pid": "1520548",
+        "bigPic": "/sheying/images/gangao/bigPic/5.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/5.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/5.jpg"
+    },
+    {
+        "picPos": 6,
+        "pid": "1520547",
+        "bigPic": "/sheying/images/gangao/bigPic/6.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/6.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/6.jpg"
+    },
+    {
+        "picPos": 7,
+        "pid": "1520546",
+        "bigPic": "/sheying/images/gangao/bigPic/7.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/7.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/7.jpg"
+    },
+    {
+        "picPos": 8,
+        "pid": "1520545",
+        "bigPic": "/sheying/images/gangao/bigPic/8.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/8.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/8.jpg"
+    },
+    {
+        "picPos": 9,
+        "pid": "1520544",
+        "bigPic": "/sheying/images/gangao/bigPic/9.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/9.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/9.jpg"
+    },
+    {
+        "picPos": 10,
+        "pid": "1520543",
+        "bigPic": "/sheying/images/gangao/bigPic/10.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/10.jpg",
+        "bigPic": "/sheying/images/gangao/bigPic/10.jpg"
+    }];
+    </script> 
+    <script type="text/javascript" src="/sheying/js/picture.js"></script> 
+    </body>
+    </html>
+

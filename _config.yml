@@ -1,0 +1,54 @@
+# Permalinks
+permalink:        /post/:title.html
+# Setup
+port: 8080
+host: 192.168.168.123
+# Setup
+#url:              //baiyunlei.tk
+img_url:          
+
+# Set to '' in case of hosting on `https://<your-github-name>.github.io`
+baseurl:          ''
+
+title:            '云磊藏书阁'
+
+# Markdown enabled, however don't use more than one paragraph (enforced by `>`)
+description:      >
+ [switch](/network)、[Windows](/windows)、[Linux](/linux)、[程序](/daima)和[所有](/)。
+
+
+# Google Analytics tracking ID
+analytics:        'UA-32028925-2'
+
+# Fallback image and color if not overwritten for tag or post
+image:            /public/images/yuanshi.jpg
+color:            '#dc322f'
+
+author:
+  name:           '云磊藏书阁'
+  email:          471450090@qq.com
+  github:         yunlei
+  tumblr:         dashboard
+  weibo:          6756108773
+  facebook:       
+  linkedin:       psettings
+  codepen:        xydPed
+  photo:          /public/images/wo.jpg
+
+
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about:          |
+    我是淡尘晴云，热爱电脑技术和黑客文化，喜欢与人交流分享开源思想和 IT 技术。我的微信是 [471450090]
+
+exclude: [vendor]
+compress_html:
+  clippings:      all
+  comments:       ["<!--", "-->"]
+  endings:        all
+  startings:      [html, head, body]
+
+sass:
+  sass_dir:       /public/css
+  style:          compressed
+
+

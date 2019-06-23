@@ -1,0 +1,37 @@
+# Add an entry, where the key represents a slug.
+# Provide at least a `name` value and optionally `image`, `color` and `description`.
+# Markdown is enabled for `description`, however don't use more than one paragraph (enforced by `>`)
+#
+# Example:
+#
+# ~~~
+# mytag:
+#   name: My Tag
+#   description: >
+#     *My Tag* is an example of how to define a custom tag.
+# ~~~
+
+windows:
+  name: Windows
+  image: /public/images/mailihubo.jpg
+  color: '#f44336'
+  description: |
+    windows系统服务部署比较少些，好多都是处理一些系统问题。
+
+linux:
+  name: Linux
+  image: /public/images/yanshi.jpg
+  description: >
+    Linux系统服务部署相对多一点，部署过好多的服务也处理过各式各样的问题。
+
+daima:
+  name: 程序
+  image: /public/images/aiaibaixue.jpg
+  description: >
+    编写的代码主要是python、和shell的一些脚本，编写代码需要很好的思维能力。
+
+network:
+  name: switch
+  image: /public/images/wangluo.jpeg
+  description: >
+   网络上的一些配置，思科、华三交换机的配和调试命令整理。
