@@ -7,7 +7,7 @@ color: '#f44336'
 order: 7
 ---
 
-![](/public/images/ylcsg.gif "淡尘晴云")
+![](/public/images/ylcsg.gif "云磊藏书阁")
 {% comment %}
   This inserts the "about" photo and text from `_config.yml`.
   You can edit it there (jekyll needs restart!) or remove it and provide your own photo/text.
@@ -36,6 +36,6 @@ order: 7
 本站使用 GitHub Page 和 Jekyll 进行搭建,是从[饮冰先生](https://github.com/myanbin/myanbin.github.io)的博客源代码修改而来。
 ## 联系我
 
-欢迎关注我的微博 [淡尘晴云](https://www.weibo.com/u/6756108773/)，或发邮件到 [{{site.author.email}}](mailto:{{site.author.email}}) 与我联系。你也可以通过页面左下角的链接给我留言。
+欢迎关注我的微博 [云磊藏书阁](https://www.weibo.com/u/6756108773/)，或发邮件到 [{{site.author.email}}](mailto:{{site.author.email}}) 与我联系。你也可以通过页面左下角的链接给我留言。
 
 

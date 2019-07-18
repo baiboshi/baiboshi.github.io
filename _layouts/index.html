@@ -1,23 +1,33 @@
 ---
 layout: default
 ---
-<article class="index">
+<div class="theme">
+    <ul id="styles">
+        <li id="silver">银</li>
+        <li id="blue">蓝</li>
+        <li id="heige">黑</li>
+        <li id="lightred">红</li>
+        <li id="baowen">白</li>  
+    </ul>
+</div>
+<article>
+  <div class="toc">
   <h1 class="page-title">所有文章</h1>
-  <div class="message">每日电脑为伴，喜愁自在其中。多少次的尝试，换来最终的成功。</div>
+  <div class="message">万事皆因忙中错，好人半自苦中来.</div>
   {% for post in site.posts %}
     {% assign currentdate = post.date | date: "%Y" %}
     {% if currentdate != date %}
       {% unless forloop.first %}</ul>{% endunless %}
       <h2 id="y{{post.date | date: "%Y"}}">{{currentdate}}</h2>
-      <ul class="related-posts">
       {% assign date = currentdate %}
     {% endif %}
     <li>
-      <div class="heading">
-        <a href="{{site.baseurl}}{{post.url}}"><span>{{post.title}}</span></a>
-        <span class="timestamp">{{post.date | date: "%m/%d"}}</span>
-      </div>
+        <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+          <span class="chapter">{{post.title}}</span>
+          <span class="toc-page">{{post.date | date: "%m/%d"}}</span>
+        </a>
     </li>
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
+  </div> 
 </article>

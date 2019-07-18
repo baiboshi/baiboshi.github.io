@@ -38,7 +38,6 @@ body {
 }
 body {
   font-family: "Nato Sans", "Open Sans", 'Microsoft Yahei', sans-serif;
-  background: url("/public/images/backgrnd.jpg");
   color: #161c1f;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -387,11 +386,11 @@ th {
   display: block;
   /*margin-top: -.5rem;*/
   margin-bottom: 0.5rem;
-  color: #8c8b8b;
+  color: #24292e;
   font-size: .9rem;
 }
 .post-date a {
-  color: #8c8b8b !important;
+  color: #24292e !important;
 }
 
 .post hr:not(.post-divide) {
@@ -452,72 +451,90 @@ div.footnotes::before {
 }
 
 
-/**
- * Home Page Styles
- *
- * Post List and more
- */
-
-
-/* Related posts */
-.related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+/*类似word目录树*/
+p,
+li {
+  line-height: 3.2rem;
+  margin-bottom: 3.2rem;
 }
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-}
-.related-posts li {
-  box-sizing: border-box;
-}
-.related-posts .heading {
-  margin-bottom: 0.5rem;
-  font-weight: normal;
-  clear: both
+a {text-decoration:none;}
+h2 {
+  font: bold 1.5rem/4rem helvetica, arial, sans-serif;
+  letter-spacing: .1rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
 }
 
-/*
- * Dot Leaders
- * https://www.w3.org/Style/Examples/007/leaders.en.html
- */
-ul.related-posts {
-  padding: 0;
-  overflow-x: hidden;
-  list-style: none;
-}
-
-ul.related-posts .heading::after {
-  float: left;
-  width: 0;
-  white-space: nowrap;
-  content:
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-"· · · · · · · · · · · · · · · · · · · · "
-}
-
-ul.related-posts a {
-  color: #000000;
-  background: url("/public/images/backgrnd1.png");
-}
-ul.related-posts .timestamp {
-  float: right;
-  padding-left: 5px;
-  background: url("/public/images/backgrnd1.png");
+article {
   position: relative;
-  z-index: 1;
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
 }
-/* HACK: hover style for dot leaders */
-ul.related-posts li a:hover {
-  text-decoration: none;
-  border-bottom: none;
+
+
+/*== Table of contents == */
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
-ul.related-posts li a:hover > span {
-  border-bottom: 1px solid;
+
+.toc { padding: 1.4rem; margin:-0.6rem;}
+.toc,
+.toc ol > li:before,
+.chapter {
+  position: relative;
+  z-index: 2; }
+
+.toc ol {
+  counter-reset: item;
+  position: relative; }
+  .toc ol li li:before {
+    content: counters(item, ".") " "; }
+
+.toc li {
+  counter-increment: item;
+  display: table;
+  font-weight: 400;
+  margin-bottom: .8rem;
+  margin-left: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: 100%; }
+  .toc li li {
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-left: 0; }
+  .toc li .toc-page:before {
+    content: '';
+    display: block;
+    left: 0;
+    margin-top: 1.8rem;
+    position: absolute;
+    right: 4rem; }
+  .toc li > a {
+    display: inline-block;
+    width: 100%; 
+    position: relative;}
+  
+  .toc li a:hover span {
+    font-weight: 600; }
+  .toc li a:hover .toc-page:before {
+    border-bottom-width: 2px; }
+
+.chapter {
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 3.2rem;
+  padding-right: .8rem; }
+
+.toc-page {
+  float: right; }
+
+/*=== Colors === */
+.toc li .toc-page:before {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.9); 
 }

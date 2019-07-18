@@ -414,11 +414,12 @@
     page-break-before: always;
   }
 }
+// 主页logo //
 .accpe {
   width: 150%;
   height: 180px;
   position: absolute;
-  margin:-148px 0px 10px -8%;
+  margin:-132px 0px -2px -8%;
 }
 @-webkit-keyframes rotation {
   from {-webkit-transform: rotate(0deg);
@@ -436,4 +437,17 @@
 
 .img {
   border-radius: 200px;
+}
+#wow {
+  margin: 60px auto;
+}
+#wow img {
+  border-radius:50%;
+  max-width: 33.3%;
+  margin-left: 94px;
+}
+//皮肤//
+.theme{
+  position: absolute;
+  z-index: 9999;
 }

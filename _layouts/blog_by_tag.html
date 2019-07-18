@@ -12,24 +12,25 @@ layout: default
   {% capture desc %}{{tag.description}}{% endcapture %}
   {{desc | markdownify}}
 {% endif %}
-
+<div class="toc">
 {% if site.tags[page.tag] %}
   {% for post in site.tags[page.tag] %}
     {% assign currentdate = post.date | date: "%Y" %}
     {% if currentdate != date %}
       {% unless forloop.first %}</ul>{% endunless %}
       <h2 id="y{{post.date | date: "%Y"}}">{{currentdate}}</h2>
-      <ul class="related-posts">
       {% assign date = currentdate %}
     {% endif %}
-    <li>
-      <div class="heading">
-        <a href="{{site.baseurl}}{{post.url}}"><span>{{post.title}}</span></a>
-        <span class="timestamp">{{post.date | date: "%m/%d"}}</span>
-      </div>
-    </li>
+    <ol>
+        <li>
+           <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+           <span class="chapter">{{post.title}}</span>
+           <span class="toc-page">{{post.date | date: "%m/%d"}}</span></a>
+        </li>
+     </ol>
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
+</div>
 {% else %}
     <p>此标签下暂无文章</p>
 {% endif %}

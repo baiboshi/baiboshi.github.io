@@ -44,7 +44,9 @@ layout: default
   {{site.author.about | markdownify}}
 </aside>
 {% endif %}
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<style>
+  @import url(https://unpkg.com/gitalk/dist/gitalk.css);
+</style>
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 <div id="gitalk-container"></div>     
 <script type="text/javascript">

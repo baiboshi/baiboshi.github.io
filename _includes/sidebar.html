@@ -16,7 +16,6 @@
 {% unless image %}
   {% assign image = site.image %}
 {% endunless %}
-
 <div id="_backdrop"></div>
 <a   id="_menu" href="#_sidebar">☰</a>
 <aside id="_sidebar" class="sidebar" {% if image %}style="background-image:url('{{image}}')"{% endif %}>
@@ -28,16 +27,6 @@
     </div>
     </div>
       <script src="/fenche/index.js"></script>
-      <style>
-        #wow {
-          margin: 60px auto;
-        }
-        #wow img {
-          border-radius:50%;
-          max-width: 33%;
-          margin-left: 94px;
-        }
-      </style>
     <div class="sidebar-about">
     <h1><img src="{{site.baseurl}}/public/images/yunleichangshuge.gif" alt="{{site.title}}"></h1>
       {{site.description | markdownify}}
@@ -51,7 +40,7 @@
       {% endcomment %}
       <a class="sidebar-nav-item" href="{{site.baseurl}}/sheying/sheying.html">摄影</a>
       <a class="sidebar-nav-item" href="{{site.baseurl}}/yingyue/yingyue.html">音乐</a>
-      <a class="sidebar-nav-item" href="{{site.baseurl}}/Gallery/Gallery.html">视频</a>
+      <a class="sidebar-nav-item" href="{{site.baseurl}}/avideo/avideo.html">视频</a>
       {% assign pages_list = site.pages | sort: "order" %}
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -86,7 +75,7 @@
       <a href="https://www.linkedin.com/{{site.author.linkedin}}"><span class="icon icon-linkedin"></span></a>
       {% endif %}
       {% if site.author.codepen %}
-      <a href="https://codepen.io//471450090/pen/{{site.author.codepen}}"><span class="icon icon-codepen"></span></a>
+      <a onclick="red()"><span class="icon icon-codepen"></span></a>
       {% endif %}
     </div>
   </div>

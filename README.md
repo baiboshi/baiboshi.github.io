@@ -1,7 +1,7 @@
 
-## 淡尘晴云的博客
+## 云磊藏书阁
 
-![](/public/images/ylcsg.gif "淡尘晴云博客")
+![](/public/images/ylcsg.gif "云磊藏书阁")
 
 这个是**本人博客**的源码，使用 Jekyll 来生成静态网页。主題是 hydedark。
 

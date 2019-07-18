@@ -38,7 +38,7 @@ author:
 
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:          |
-    我是淡尘晴云，热爱电脑技术和黑客文化，喜欢与人交流分享开源思想和 IT 技术。我的微信是 [471450090]
+    本人，热爱电脑技术和黑客文化，喜欢与人交流分享开源思想和 IT 技术。我的微信是 [471450090]
 
 exclude: [vendor]
 compress_html:
